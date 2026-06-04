@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.container {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.navbar {
+  height: 35px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 12px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+  margin-left: 12px;
+}
+
+.header {
+  display: table;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid black;
+  min-height: 290px;
+}
+
+.header-left,
+.header-right {
+  display: table-cell;
+  width: 50%;
+  vertical-align: top;
+}
+
+.header h2 {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.header p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+button {
+  font-size: 10px;
+  padding: 1px 4px;
+}
+
+.header img {
+  width: 388px;
+  height: 259px;
+  float: right;
+}
+
+.section {
+  padding: 18px 15px 14px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.section h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+
+.section p {
+  color: gray;
+  font-size: 12px;
+  margin-bottom: 28px;
+}
+
+.biodata {
+  width: 100%;
+  border-spacing: 0 13px;
+}
+
+.biodata td {
+  border: 1px solid #d5d5d5;
+  background: #f2f2f2;
+  height: 34px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.biodata td:not(:last-child) {
+  margin-right: 10px;
+}
+
+.portfolio {
+  padding: 18px 15px 14px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  margin: 0 0 30px;
+  font-size: 24px;
+}
+
+.portfolio-table {
+  width: 100%;
+  border-spacing: 13px 0;
+}
+
+.portfolio-table td {
+  border: 1px solid black;
+  width: 33.33%;
+  padding: 7px 7px 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.portfolio-table img {
+  width: 100%;
+  height: 137px;
+}
+
+.portfolio-table h4 {
+  margin: 8px 0 2px;
+  font-size: 10px;
+}
+
+.portfolio-table p {
+  margin: 0;
+  font-size: 12px;
+}
