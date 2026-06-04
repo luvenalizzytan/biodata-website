@@ -1,138 +1,193 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  color: black;
-}
-
-.container {
-  width: 100%;
-  border: 1px solid black;
+  color: #222;
+  background-color: #f4f8ff;
 }
 
 .navbar {
-  height: 35px;
-  border-bottom: 1px solid black;
+  background-color: #007bff;
+  color: white;
+  padding: 18px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
-  font-size: 12px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .menu a {
-  color: black;
+  color: white;
   text-decoration: none;
-  margin-left: 12px;
+  font-weight: bold;
+  margin-left: 22px;
 }
 
-.header {
-  display: table;
-  width: 100%;
-  padding: 15px;
-  border-bottom: 1px solid black;
-  min-height: 290px;
+.hero {
+  background-color: white;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
-.header-left,
-.header-right {
-  display: table-cell;
-  width: 50%;
-  vertical-align: top;
-}
-
-.header h2 {
-  margin: 5px 0;
-  font-size: 20px;
-}
-
-.header p {
-  margin: 5px 0;
-  font-size: 12px;
-}
-
-button {
-  font-size: 10px;
-  padding: 1px 4px;
-}
-
-.header img {
-  width: 388px;
-  height: 259px;
-  float: right;
-}
-
-.section {
-  padding: 18px 15px 14px;
-  border-bottom: 1px solid black;
+.hero-text {
   text-align: center;
 }
 
-.section h2 {
-  margin: 0 0 14px;
-  font-size: 24px;
+.hero-text h1 {
+  font-size: 26px;
+  margin-bottom: 12px;
 }
 
-.section p {
-  color: gray;
-  font-size: 12px;
+.hero-text p {
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.hero-text button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.about {
+  background-color: white;
+  text-align: center;
+  padding: 35px 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.about h2,
+.portfolio h2 {
+  color: #007bff;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.about > p {
+  color: #666;
   margin-bottom: 28px;
 }
 
-.biodata {
-  width: 100%;
-  border-spacing: 0 13px;
+.biodata-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-.biodata td {
-  border: 1px solid #d5d5d5;
-  background: #f2f2f2;
-  height: 34px;
-  font-size: 12px;
-  text-align: center;
+.biodata-grid div {
+  background-color: #f3f3f3;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
 }
 
-.biodata td:not(:last-child) {
-  margin-right: 10px;
+.biodata-grid strong {
+  color: #007bff;
 }
 
 .portfolio {
-  padding: 18px 15px 14px;
+  background-color: white;
   text-align: center;
+  padding: 35px 25px;
 }
 
-.portfolio h2 {
-  margin: 0 0 30px;
-  font-size: 24px;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 28px;
 }
 
-.portfolio-table {
+.card {
+  background-color: white;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
   width: 100%;
-  border-spacing: 13px 0;
+  height: 200px;
+  object-fit: cover;
 }
 
-.portfolio-table td {
-  border: 1px solid black;
-  width: 33.33%;
-  padding: 7px 7px 10px;
+.card h3 {
+  font-size: 16px;
+  margin: 12px 0 6px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
   text-align: center;
-  font-size: 12px;
+  padding: 18px;
+  font-weight: bold;
 }
 
-.portfolio-table img {
-  width: 100%;
-  height: 137px;
+/* Tablet */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .biodata-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-.portfolio-table h4 {
-  margin: 8px 0 2px;
-  font-size: 10px;
-}
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-.portfolio-table p {
-  margin: 0;
-  font-size: 12px;
+  .menu a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  .biodata-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-image img {
+    height: 250px;
+  }
 }
